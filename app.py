@@ -14,6 +14,12 @@ model = load_model()
 st.write("""
 # Tomato Leaf Disease Classification Using Image Recognition
 """)
+st.text(" CPE 027-CPE41S4 - Digital Signal Processing and Application")
+st.text(" Members:")
+st.text(" Aragon, Roujienald")
+st.text(" Fernandez, Rhenz Nathaniel")
+st.text(" Geslani, Grant Guriel")
+st.text(" Instructor: Engr. Bonry Dorado")
 
 # Add file uploader
 file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
