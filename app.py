@@ -3,13 +3,17 @@ import tensorflow as tf
 from PIL import Image, ImageOps
 import numpy as np
 
-# Load the model using st.cache_resource
-@st.cache_resource(allow_output_mutation=True)
+# Load the model using st.cache_data
+@st.cache_data(allow_output_mutation=True)
 def load_model():
     model = tf.keras.models.load_model('tomato.h5')
     return model
 
 model = load_model()
+
+st.write("""
+# Tomato Leaf Disease Classification Using Image Recognition
+""")
 
 st.write("""
 # Tomato Leaf Disease Classification Using Image Recognition
@@ -62,3 +66,5 @@ else:
         st.success(f"OUTPUT: {predicted_class}")
     else:
         st.text("Invalid image format. Please upload a valid image.")
+
+
