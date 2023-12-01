@@ -21,7 +21,6 @@ st.text(" Aragon, Roujienald")
 st.text(" Fernandez, Rhenz Nathaniel")
 st.text(" Geslani, Grant Guriel")
 st.text(" Instructor: Engr. Bonry Dorado")
-file=st.file_uploader("Choose tomato leaf photo from your computer",type=["jpg"])
 
 # Add file uploader
 file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
