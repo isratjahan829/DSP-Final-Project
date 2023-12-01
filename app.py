@@ -23,7 +23,7 @@ st.text(" Geslani, Grant Guriel")
 st.text(" Instructor: Engr. Bonry Dorado")
 
 # Add file uploader
-file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+file = st.file_uploader("Choose an image...", type=["jpg", "jpeg"])
 
 # Check if a file is uploaded
 if file is None:
@@ -34,7 +34,7 @@ else:
     st.image(image, use_column_width=True)
 
     # Resize and preprocess the image for prediction
-    size = (224, 224)
+    size = (256, 256)
     image = ImageOps.fit(image, size, Image.ANTIALIAS)
     img = np.asarray(image)
     img_reshape = img[np.newaxis, ...]
